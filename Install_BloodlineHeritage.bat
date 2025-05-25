@@ -8,7 +8,7 @@ setlocal EnableDelayedExpansion
 set "GAME_NAME=Bloodline Heritage"
 set "SEVENZIP=BHData\7za.exe"
 set "DEFAULT_PATH=C:\Jeux"
-set "HELP_URL=https://blood-heritage.github.io"
+set "HELP_URL=https://blood-heritage.github.io/src/ManuelInstallationDesinstallation.pdf"
 
 :: === MENU PRINCIPAL ===
 :MENU
@@ -62,6 +62,7 @@ if not exist "%DATA_PATH%" mkdir "%DATA_PATH%"
 echo 📦 Extraction des données supplémentaires...
 call :Run7Zip "BHData\Data_Part1.7z" "%DATA_PATH%"
 call :Run7Zip "BHData\Data_Part2.7z" "%DATA_PATH%"
+call :Run7Zip "BHData\Data_Part2_Bis.7z" "%DATA_PATH%"
 call :Run7Zip "BHData\Data_Part3.7z" "%DATA_PATH%"
 
 :: Fichiers complémentaires
